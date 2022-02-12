@@ -9,8 +9,8 @@ Feb 11, 2022 - Feb 13, 2022
 ## Description 
 A web browser game that informs players about the dangers of space junk.
 
-## Backstory
-A space junk is so close to hitting the International Space Station. You, the astronaut, have to hover over to the space ship that came to transport you to a near by Space Station. Be careful of the other space junk between the International Space Station and the space ship!
+## Premise
+A space junk is so close to hitting the International Space Station. You, the astronaut, have to hover over to the space ship that came to transport you to a near by Space Station. Be careful of the space junks flying towards you as you hover over to the space ship!
 
 ## Problem
 <img src="https://www.nasa.gov/sites/default/files/4-8-nrc-evaluates-nasas-orbital-debris-programs.jpg" width="300" height="300">
