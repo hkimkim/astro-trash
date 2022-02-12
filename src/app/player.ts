@@ -5,13 +5,13 @@ import { GameApp } from "./app";
 
 export class Player {
     sprite: PIXI.AnimatedSprite;
-
+    // isMidPlane: Boolean; 
 
     public constructor() {
         this.sprite = GetSprite("astronaut");
         // starting position of the astronaut
         this.sprite.x = 5; 
-        this.sprite.y = GameApp.yPosition;
+        // this.sprite.y = GameApp.yPosition;
         this.sprite.animationSpeed = 0.05;
         this.sprite.play();
 
@@ -26,5 +26,19 @@ export class Player {
         return true
     }
 
-    public Update()
+
+    public Update() {
+        // check if key pressed down and move downwards
+        if (GameApp.PressedDown) {
+            // this is just an inital number
+            this.sprite.y = -5; 
+        }
+
+        // check if the key pressed up and move upwards
+        if (GameApp.PressedUp) {
+            this.sprite.y = +5
+        }
+
+        // check if user is colliding with any of the entity
+    }
 }

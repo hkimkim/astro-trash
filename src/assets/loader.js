@@ -8,7 +8,7 @@ import spaceDebrisThree from './images/Space/spaceDebrisThree.png';
 import spaceDebrisFour from './images/Space/spaceDebrisFour.png';
 // import hackbeanpot from './images/Space/hackbeanpot.jpeg';
 // import jetpack from './images/Bomberman/Left/*.png';
-import * as PIXI from "pixi.js"
+import * as PIXI from 'pixi.js'
 
 // Load game assets from image paths
 const spriteFrames = {
@@ -17,7 +17,7 @@ const spriteFrames = {
     spaceDebrisTwo: Object.values(spaceDebrisTwo),
     spaceDebrisThree: Object.values(spaceDebrisThree),
     spaceDebrisFour: Object.values(spaceDebrisFour),
-    hackbeanpot: Object.values(hackbeanpot)
+    // hackbeanpot: Object.values(hackbeanpot)
 };
 
 // Adds texture to game assets

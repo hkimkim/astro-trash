@@ -52,10 +52,32 @@ export class GameApp {
         GameApp.Stage = this.app.stage;
         GameApp.Width = width - 1;
 
-        GameApp.SetUpGame();
-        GameApp.Update();
-    }
+        parent.replaceChild(this.app.view, parent.lastElementChild);
 
+
+        // Set keyboard event
+        window.onkeydown = (ev: KeyboardEvent): any => {
+            if (ev.key == " ") {
+                GameApp.PressedSpace = true;
+                console.log("space pressed")
+            } 
+
+            if (ev.key == "ArrowDown" || ev.key == "w") {
+                GameApp.PressedDown = true;
+            }
+
+            if (ev.key == "ArrowUp" || ev.key == "s") {
+                GameApp.PressedUp = true;
+            }
+          };
+
+        GameApp.SetUpGame();            
+        
+
+        this.app.ticker.add((delta) => {
+            // GameApp.Update(delta)
+        });
+    }
 
     // Sets game stage
     static SetUpGame() {
@@ -69,6 +91,7 @@ export class GameApp {
 
         // Add score board to stage
         GameApp.Stage.addChild(GameApp.ScoreBoard);
+        // GameApp.Stage.addChild(player);
         this.ScoreNextObstacle = 0;
     }
 
