@@ -54,7 +54,6 @@ export class GameApp {
 
         parent.replaceChild(this.app.view, parent.lastElementChild);
 
-
         // Set keyboard event
         window.onkeydown = (ev: KeyboardEvent): any => {
             if (ev.key == " ") {
@@ -64,18 +63,19 @@ export class GameApp {
 
             if (ev.key == "ArrowDown" || ev.key == "w") {
                 GameApp.PressedDown = true;
+                console.log("pressed arrow down")
             }
 
             if (ev.key == "ArrowUp" || ev.key == "s") {
                 GameApp.PressedUp = true;
+                console.log("pressed space pressed")
             }
           };
 
         GameApp.SetUpGame();            
-        
 
         this.app.ticker.add((delta) => {
-            // GameApp.Update(delta)
+            GameApp.Update(delta)
         });
     }
 
@@ -93,6 +93,7 @@ export class GameApp {
         GameApp.Stage.addChild(GameApp.ScoreBoard);
         // GameApp.Stage.addChild(player);
         this.ScoreNextObstacle = 0;
+        console.log("Setup game run")
     }
 
     static Update(delta: number) {
@@ -126,6 +127,7 @@ export class GameApp {
 
 
     // Checks if next space debris needs to be place on screen
+    // make random
     static ShouldPlaceNextSpaceDebris(): boolean {
         return true;
     }
