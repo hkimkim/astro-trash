@@ -11,7 +11,7 @@ export class SpaceDebris {
         this.sprite = GetSprite(spriteName);
         this.sprite.x = xPosition; 
         this.sprite.y = yPosition;
-        this.solid = isSolid;
+        // this.solid = isSolid;
     }
 
     // TODO: function that updates the distance 
