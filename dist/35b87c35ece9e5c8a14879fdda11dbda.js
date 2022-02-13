@@ -68,85 +68,85 @@ require = (function (modules, cache, entry) {
 
   // Override the current require with this new one
   return newRequire;
-})({38:[function(require,module,exports) {
+})({40:[function(require,module,exports) {
 module.exports="/dist/981411fa9942a83aa4996aaca1fc9bd3.png";
-},{}],40:[function(require,module,exports) {
+},{}],41:[function(require,module,exports) {
 module.exports="/dist/5aff6899aa791e313578201443614996.png";
-},{}],39:[function(require,module,exports) {
+},{}],42:[function(require,module,exports) {
 module.exports="/dist/cdf08e8eedad1282681651193971059b.png";
-},{}],22:[function(require,module,exports) {
+},{}],23:[function(require,module,exports) {
 module.exports = {
   "astronaut_1": require("./astronaut_1.png"),
   "astronaut_2": require("./astronaut_2.png"),
   "astronaut_3": require("./astronaut_3.png")
 };
-},{"./astronaut_1.png":38,"./astronaut_2.png":40,"./astronaut_3.png":39}],42:[function(require,module,exports) {
+},{"./astronaut_1.png":40,"./astronaut_2.png":41,"./astronaut_3.png":42}],33:[function(require,module,exports) {
 module.exports="/dist/f5d943dfdfc64127545d12671f2816d1.png";
-},{}],23:[function(require,module,exports) {
+},{}],24:[function(require,module,exports) {
 module.exports = {
   "obstacle1": require("./obstacle1.png")
 };
-},{"./obstacle1.png":42}],34:[function(require,module,exports) {
+},{"./obstacle1.png":33}],43:[function(require,module,exports) {
 module.exports="/dist/7fc0b67173d4480e3b18a91789134c05.png";
-},{}],24:[function(require,module,exports) {
+},{}],25:[function(require,module,exports) {
 module.exports = {
   "obstacle2": require("./obstacle2.png")
 };
-},{"./obstacle2.png":34}],43:[function(require,module,exports) {
+},{"./obstacle2.png":43}],34:[function(require,module,exports) {
 module.exports="/dist/b72461af55a79d07415fdf952d528e2e.png";
-},{}],25:[function(require,module,exports) {
+},{}],26:[function(require,module,exports) {
 module.exports = {
   "obstacle3": require("./obstacle3.png")
 };
-},{"./obstacle3.png":43}],33:[function(require,module,exports) {
+},{"./obstacle3.png":34}],44:[function(require,module,exports) {
 module.exports="/dist/e8fc33cd557ea3c779df4003251f0e45.png";
-},{}],26:[function(require,module,exports) {
+},{}],27:[function(require,module,exports) {
 module.exports = {
   "obstacle4": require("./obstacle4.png")
 };
-},{"./obstacle4.png":33}],44:[function(require,module,exports) {
+},{"./obstacle4.png":44}],35:[function(require,module,exports) {
 module.exports="/dist/03dffb8b85449a20346a3252a3ee2b55.png";
-},{}],45:[function(require,module,exports) {
+},{}],36:[function(require,module,exports) {
 module.exports="/dist/ec21e7a1a5872a602bc53bc4a2ca6507.png";
-},{}],46:[function(require,module,exports) {
+},{}],37:[function(require,module,exports) {
 module.exports="/dist/8b20963cbc817462882c11fc21fbe095.png";
-},{}],27:[function(require,module,exports) {
+},{}],28:[function(require,module,exports) {
 module.exports = {
   "starimage copy 2": require("./starimage copy 2.png"),
   "starimage copy": require("./starimage copy.png"),
   "starimage": require("./starimage.png")
 };
-},{"./starimage copy 2.png":44,"./starimage copy.png":45,"./starimage.png":46}],32:[function(require,module,exports) {
+},{"./starimage copy 2.png":35,"./starimage copy.png":36,"./starimage.png":37}],46:[function(require,module,exports) {
 module.exports="/dist/a36a989b207d0eea6ffd5a2a4013f8d5.png";
-},{}],35:[function(require,module,exports) {
+},{}],45:[function(require,module,exports) {
 module.exports="/dist/be282214813937cf78da425a115a1153.png";
-},{}],37:[function(require,module,exports) {
+},{}],47:[function(require,module,exports) {
 module.exports="/dist/eb5853b06119671c6dd92da7e83355b0.png";
-},{}],28:[function(require,module,exports) {
+},{}],29:[function(require,module,exports) {
 module.exports = {
   "starimagecolor copy 2": require("./starimagecolor copy 2.png"),
   "starimagecolor copy": require("./starimagecolor copy.png"),
   "starimagecolor": require("./starimagecolor.png")
 };
-},{"./starimagecolor copy 2.png":32,"./starimagecolor copy.png":35,"./starimagecolor.png":37}],47:[function(require,module,exports) {
+},{"./starimagecolor copy 2.png":46,"./starimagecolor copy.png":45,"./starimagecolor.png":47}],38:[function(require,module,exports) {
 module.exports="/dist/ebd87e804804ae06af70095074d30fd0.png";
-},{}],29:[function(require,module,exports) {
+},{}],30:[function(require,module,exports) {
 module.exports = {
   "startpage": require("./startpage.png")
 };
-},{"./startpage.png":47}],36:[function(require,module,exports) {
+},{"./startpage.png":38}],48:[function(require,module,exports) {
 module.exports="/dist/a2bcc54e60a410a2604049b992aaa441.png";
-},{}],30:[function(require,module,exports) {
+},{}],31:[function(require,module,exports) {
 module.exports = {
   "spacebackground": require("./spacebackground.png")
 };
-},{"./spacebackground.png":36}],48:[function(require,module,exports) {
+},{"./spacebackground.png":48}],39:[function(require,module,exports) {
 module.exports="/dist/7b58c26c7067f722127ef7adb498cad0.png";
-},{}],31:[function(require,module,exports) {
+},{}],32:[function(require,module,exports) {
 module.exports = {
   "popupscreen": require("./popupscreen.png")
 };
-},{"./popupscreen.png":48}],89:[function(require,module,exports) {
+},{"./popupscreen.png":39}],84:[function(require,module,exports) {
 var global = (1,eval)("this");
 (function(global){
 
@@ -495,7 +495,7 @@ Promise.reject = function(reason){
 
 })(typeof window != 'undefined' ? window : typeof global != 'undefined' ? global : typeof self != 'undefined' ? self : this);
 
-},{}],90:[function(require,module,exports) {
+},{}],85:[function(require,module,exports) {
 /*
 object-assign
 (c) Sindre Sorhus
@@ -587,7 +587,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 	return to;
 };
 
-},{}],66:[function(require,module,exports) {
+},{}],58:[function(require,module,exports) {
 "use strict";
 
 var _es6PromisePolyfill = require("es6-promise-polyfill");
@@ -711,7 +711,7 @@ if (!window.Int32Array) {
   window.Int32Array = Array;
 }
 //# sourceMappingURL=polyfill.es.js.map
-},{"es6-promise-polyfill":89,"object-assign":90}],88:[function(require,module,exports) {
+},{"es6-promise-polyfill":84,"object-assign":85}],86:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -813,7 +813,7 @@ function isMobile(param) {
   return result;
 }
 //# sourceMappingURL=isMobile.js.map
-},{}],87:[function(require,module,exports) {
+},{}],83:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -839,7 +839,7 @@ Object.defineProperty(exports, "default", {
 });
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./isMobile":88}],68:[function(require,module,exports) {
+},{"./isMobile":86}],65:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1133,7 +1133,7 @@ var settings = {
 exports.isMobile = isMobile;
 exports.settings = settings;
 //# sourceMappingURL=settings.es.js.map
-},{"ismobilejs":87}],85:[function(require,module,exports) {
+},{"ismobilejs":83}],96:[function(require,module,exports) {
 'use strict';
 
 var has = Object.prototype.hasOwnProperty
@@ -1471,7 +1471,7 @@ if ('undefined' !== typeof module) {
   module.exports = EventEmitter;
 }
 
-},{}],84:[function(require,module,exports) {
+},{}],97:[function(require,module,exports) {
 'use strict';
 
 module.exports = earcut;
@@ -2703,7 +2703,7 @@ module.exports = {
   }
 };
 
-},{}],95:[function(require,module,exports) {
+},{}],94:[function(require,module,exports) {
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -2789,7 +2789,7 @@ var isArray = Array.isArray || function (xs) {
   return Object.prototype.toString.call(xs) === '[object Array]';
 };
 
-},{}],94:[function(require,module,exports) {
+},{}],95:[function(require,module,exports) {
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -2882,7 +2882,7 @@ var objectKeys = Object.keys || function (obj) {
 exports.decode = exports.parse = require('./decode');
 exports.encode = exports.stringify = require('./encode');
 
-},{"./decode":95,"./encode":94}],83:[function(require,module,exports) {
+},{"./decode":94,"./encode":95}],90:[function(require,module,exports) {
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -3616,7 +3616,7 @@ Url.prototype.parseHost = function() {
   if (host) this.hostname = host;
 };
 
-},{"punycode":92,"./util":93,"querystring":91}],49:[function(require,module,exports) {
+},{"punycode":92,"./util":93,"querystring":91}],61:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -4080,7 +4080,7 @@ exports.TARGETS = TARGETS;
 exports.TYPES = TYPES;
 exports.WRAP_MODES = WRAP_MODES;
 //# sourceMappingURL=constants.es.js.map
-},{}],51:[function(require,module,exports) {
+},{}],69:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -5021,7 +5021,7 @@ exports.string2hex = string2hex;
 exports.trimCanvas = trimCanvas;
 exports.uid = uid;
 //# sourceMappingURL=utils.es.js.map
-},{"@pixi/settings":68,"eventemitter3":85,"earcut":84,"url":83,"@pixi/constants":49}],59:[function(require,module,exports) {
+},{"@pixi/settings":65,"eventemitter3":96,"earcut":97,"url":90,"@pixi/constants":61}],74:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -7042,7 +7042,7 @@ exports.SHAPES = SHAPES;
 exports.Transform = Transform;
 exports.groupD8 = groupD8;
 //# sourceMappingURL=math.es.js.map
-},{}],52:[function(require,module,exports) {
+},{}],54:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -8758,7 +8758,7 @@ exports.Container = Container;
 exports.DisplayObject = DisplayObject;
 exports.TemporaryDisplayObject = TemporaryDisplayObject;
 //# sourceMappingURL=display.es.js.map
-},{"@pixi/settings":68,"@pixi/math":59,"@pixi/utils":51}],74:[function(require,module,exports) {
+},{"@pixi/settings":65,"@pixi/math":74,"@pixi/utils":69}],52:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -9350,7 +9350,7 @@ var AccessibilityManager = /** @class */function () {
 exports.AccessibilityManager = AccessibilityManager;
 exports.accessibleTarget = accessibleTarget;
 //# sourceMappingURL=accessibility.es.js.map
-},{"@pixi/display":52,"@pixi/utils":51}],69:[function(require,module,exports) {
+},{"@pixi/display":54,"@pixi/utils":69}],63:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -10215,7 +10215,7 @@ exports.Ticker = Ticker;
 exports.TickerPlugin = TickerPlugin;
 exports.UPDATE_PRIORITY = UPDATE_PRIORITY;
 //# sourceMappingURL=ticker.es.js.map
-},{"@pixi/settings":68}],55:[function(require,module,exports) {
+},{"@pixi/settings":65}],49:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -12460,7 +12460,7 @@ exports.InteractionManager = InteractionManager;
 exports.InteractionTrackingData = InteractionTrackingData;
 exports.interactiveTarget = interactiveTarget;
 //# sourceMappingURL=interaction.es.js.map
-},{"@pixi/math":59,"@pixi/ticker":69,"@pixi/display":52,"@pixi/utils":51}],76:[function(require,module,exports) {
+},{"@pixi/math":74,"@pixi/ticker":63,"@pixi/display":54,"@pixi/utils":69}],62:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -12666,7 +12666,7 @@ Object.defineProperties(Runner.prototype, {
 
 exports.Runner = Runner;
 //# sourceMappingURL=runner.es.js.map
-},{}],58:[function(require,module,exports) {
+},{}],50:[function(require,module,exports) {
 
 "use strict";
 
@@ -23691,7 +23691,7 @@ exports.resources = index;
 exports.systems = systems;
 exports.uniformParsers = uniformParsers;
 //# sourceMappingURL=core.es.js.map
-},{"@pixi/settings":68,"@pixi/constants":49,"@pixi/utils":51,"@pixi/runner":76,"@pixi/ticker":69,"@pixi/math":59}],78:[function(require,module,exports) {
+},{"@pixi/settings":65,"@pixi/constants":61,"@pixi/utils":69,"@pixi/runner":62,"@pixi/ticker":63,"@pixi/math":74}],71:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -23978,7 +23978,7 @@ Application.registerPlugin(ResizePlugin);
 
 exports.Application = Application;
 //# sourceMappingURL=app.es.js.map
-},{"@pixi/display":52,"@pixi/core":58}],57:[function(require,module,exports) {
+},{"@pixi/display":54,"@pixi/core":50}],53:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -24205,7 +24205,7 @@ var Extract = /** @class */function () {
 
 exports.Extract = Extract;
 //# sourceMappingURL=extract.es.js.map
-},{"@pixi/utils":51,"@pixi/math":59,"@pixi/core":58}],97:[function(require,module,exports) {
+},{"@pixi/utils":69,"@pixi/math":74,"@pixi/core":50}],89:[function(require,module,exports) {
 'use strict'
 
 function parseURI (str, opts) {
@@ -24256,7 +24256,7 @@ function parseURI (str, opts) {
 
 module.exports = parseURI
 
-},{}],96:[function(require,module,exports) {
+},{}],88:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -24465,7 +24465,7 @@ class MiniSignal {
 
 exports.MiniSignal = MiniSignal;
 exports.default = MiniSignal;
-},{}],86:[function(require,module,exports) {
+},{}],87:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -26811,7 +26811,7 @@ exports.async = async;
 exports.encodeBinary = encodeBinary;
 exports.middleware = index;
 //# sourceMappingURL=resource-loader.esm.js.map
-},{"parse-uri":97,"mini-signals":96}],73:[function(require,module,exports) {
+},{"parse-uri":89,"mini-signals":88}],80:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -27151,7 +27151,7 @@ exports.Loader = Loader;
 exports.LoaderResource = LoaderResource;
 exports.TextureLoader = TextureLoader;
 //# sourceMappingURL=loaders.es.js.map
-},{"resource-loader":86,"@pixi/core":58}],80:[function(require,module,exports) {
+},{"resource-loader":87,"@pixi/core":50}],57:[function(require,module,exports) {
 
 "use strict";
 
@@ -27984,7 +27984,7 @@ var ParticleRenderer = /** @class */function (_super) {
 exports.ParticleContainer = ParticleContainer;
 exports.ParticleRenderer = ParticleRenderer;
 //# sourceMappingURL=particles.es.js.map
-},{"@pixi/constants":49,"@pixi/display":52,"@pixi/utils":51,"@pixi/core":58,"@pixi/math":59}],61:[function(require,module,exports) {
+},{"@pixi/constants":61,"@pixi/display":54,"@pixi/utils":69,"@pixi/core":50,"@pixi/math":74}],78:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -31254,7 +31254,7 @@ exports.LINE_JOIN = LINE_JOIN;
 exports.LineStyle = LineStyle;
 exports.graphicsUtils = index;
 //# sourceMappingURL=graphics.es.js.map
-},{"@pixi/core":58,"@pixi/math":59,"@pixi/utils":51,"@pixi/constants":49,"@pixi/display":52}],79:[function(require,module,exports) {
+},{"@pixi/core":50,"@pixi/math":74,"@pixi/utils":69,"@pixi/constants":61,"@pixi/display":54}],75:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -31858,7 +31858,7 @@ var Sprite = /** @class */function (_super) {
 
 exports.Sprite = Sprite;
 //# sourceMappingURL=sprite.es.js.map
-},{"@pixi/constants":49,"@pixi/core":58,"@pixi/display":52,"@pixi/math":59,"@pixi/settings":68,"@pixi/utils":51}],82:[function(require,module,exports) {
+},{"@pixi/constants":61,"@pixi/core":50,"@pixi/display":54,"@pixi/math":74,"@pixi/settings":65,"@pixi/utils":69}],77:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -33905,7 +33905,7 @@ exports.Text = Text;
 exports.TextMetrics = TextMetrics;
 exports.TextStyle = TextStyle;
 //# sourceMappingURL=text.es.js.map
-},{"@pixi/sprite":79,"@pixi/core":58,"@pixi/settings":68,"@pixi/math":59,"@pixi/utils":51}],54:[function(require,module,exports) {
+},{"@pixi/sprite":75,"@pixi/core":50,"@pixi/settings":65,"@pixi/math":74,"@pixi/utils":69}],64:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -34561,7 +34561,7 @@ exports.CountLimiter = CountLimiter;
 exports.Prepare = Prepare;
 exports.TimeLimiter = TimeLimiter;
 //# sourceMappingURL=prepare.es.js.map
-},{"@pixi/settings":68,"@pixi/core":58,"@pixi/graphics":61,"@pixi/ticker":69,"@pixi/display":52,"@pixi/text":82}],62:[function(require,module,exports) {
+},{"@pixi/settings":65,"@pixi/core":50,"@pixi/graphics":78,"@pixi/ticker":63,"@pixi/display":54,"@pixi/text":77}],72:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -34908,7 +34908,7 @@ var SpritesheetLoader = /** @class */function () {
 exports.Spritesheet = Spritesheet;
 exports.SpritesheetLoader = SpritesheetLoader;
 //# sourceMappingURL=spritesheet.es.js.map
-},{"@pixi/math":59,"@pixi/core":58,"@pixi/utils":51,"@pixi/loaders":73}],64:[function(require,module,exports) {
+},{"@pixi/math":74,"@pixi/core":50,"@pixi/utils":69,"@pixi/loaders":80}],67:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -35338,7 +35338,7 @@ var TilingSpriteRenderer = /** @class */function (_super) {
 exports.TilingSprite = TilingSprite;
 exports.TilingSpriteRenderer = TilingSpriteRenderer;
 //# sourceMappingURL=sprite-tiling.es.js.map
-},{"@pixi/core":58,"@pixi/math":59,"@pixi/sprite":79,"@pixi/utils":51,"@pixi/constants":49}],50:[function(require,module,exports) {
+},{"@pixi/core":50,"@pixi/math":74,"@pixi/sprite":75,"@pixi/utils":69,"@pixi/constants":61}],76:[function(require,module,exports) {
 
 "use strict";
 
@@ -36075,7 +36075,7 @@ exports.MeshBatchUvs = MeshBatchUvs;
 exports.MeshGeometry = MeshGeometry;
 exports.MeshMaterial = MeshMaterial;
 //# sourceMappingURL=mesh.es.js.map
-},{"@pixi/core":58,"@pixi/math":59,"@pixi/constants":49,"@pixi/display":52,"@pixi/settings":68,"@pixi/utils":51}],56:[function(require,module,exports) {
+},{"@pixi/core":50,"@pixi/math":74,"@pixi/constants":61,"@pixi/display":54,"@pixi/settings":65,"@pixi/utils":69}],70:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -37821,7 +37821,7 @@ exports.BitmapFontData = BitmapFontData;
 exports.BitmapFontLoader = BitmapFontLoader;
 exports.BitmapText = BitmapText;
 //# sourceMappingURL=text-bitmap.es.js.map
-},{"@pixi/math":59,"@pixi/settings":68,"@pixi/mesh":50,"@pixi/utils":51,"@pixi/core":58,"@pixi/text":82,"@pixi/display":52,"@pixi/loaders":73}],72:[function(require,module,exports) {
+},{"@pixi/math":74,"@pixi/settings":65,"@pixi/mesh":76,"@pixi/utils":69,"@pixi/core":50,"@pixi/text":77,"@pixi/display":54,"@pixi/loaders":80}],51:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -37928,7 +37928,7 @@ var AlphaFilter = /** @class */function (_super) {
 
 exports.AlphaFilter = AlphaFilter;
 //# sourceMappingURL=filter-alpha.es.js.map
-},{"@pixi/core":58}],53:[function(require,module,exports) {
+},{"@pixi/core":50}],55:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -38775,7 +38775,7 @@ var BlurFilter = /** @class */function (_super) {
 exports.BlurFilter = BlurFilter;
 exports.BlurFilterPass = BlurFilterPass;
 //# sourceMappingURL=filter-blur.es.js.map
-},{"@pixi/core":58,"@pixi/settings":68}],81:[function(require,module,exports) {
+},{"@pixi/core":50,"@pixi/settings":65}],66:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -39238,7 +39238,7 @@ ColorMatrixFilter.prototype.grayscale = ColorMatrixFilter.prototype.greyscale;
 
 exports.ColorMatrixFilter = ColorMatrixFilter;
 //# sourceMappingURL=filter-color-matrix.es.js.map
-},{"@pixi/core":58}],63:[function(require,module,exports) {
+},{"@pixi/core":50}],68:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -39390,7 +39390,7 @@ var DisplacementFilter = /** @class */function (_super) {
 
 exports.DisplacementFilter = DisplacementFilter;
 //# sourceMappingURL=filter-displacement.es.js.map
-},{"@pixi/core":58,"@pixi/math":59}],71:[function(require,module,exports) {
+},{"@pixi/core":50,"@pixi/math":74}],82:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -39470,7 +39470,7 @@ var FXAAFilter = /** @class */function (_super) {
 
 exports.FXAAFilter = FXAAFilter;
 //# sourceMappingURL=filter-fxaa.es.js.map
-},{"@pixi/core":58}],77:[function(require,module,exports) {
+},{"@pixi/core":50}],59:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -39594,7 +39594,7 @@ var NoiseFilter = /** @class */function (_super) {
 
 exports.NoiseFilter = NoiseFilter;
 //# sourceMappingURL=filter-noise.es.js.map
-},{"@pixi/core":58}],75:[function(require,module,exports) {
+},{"@pixi/core":50}],81:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -39928,7 +39928,7 @@ _display.DisplayObject.prototype._cacheAsBitmapDestroy = function _cacheAsBitmap
 
 exports.CacheData = CacheData;
 //# sourceMappingURL=mixin-cache-as-bitmap.es.js.map
-},{"@pixi/core":58,"@pixi/sprite":79,"@pixi/display":52,"@pixi/math":59,"@pixi/utils":51,"@pixi/settings":68}],70:[function(require,module,exports) {
+},{"@pixi/core":50,"@pixi/sprite":75,"@pixi/display":54,"@pixi/math":74,"@pixi/utils":69,"@pixi/settings":65}],73:[function(require,module,exports) {
 "use strict";
 
 var _display = require("@pixi/display");
@@ -39979,7 +39979,7 @@ _display.Container.prototype.getChildByName = function getChildByName(name, deep
   return null;
 };
 //# sourceMappingURL=mixin-get-child-by-name.es.js.map
-},{"@pixi/display":52}],60:[function(require,module,exports) {
+},{"@pixi/display":54}],60:[function(require,module,exports) {
 "use strict";
 
 var _display = require("@pixi/display");
@@ -40020,7 +40020,7 @@ _display.DisplayObject.prototype.getGlobalPosition = function getGlobalPosition(
   return point;
 };
 //# sourceMappingURL=mixin-get-global-position.es.js.map
-},{"@pixi/display":52,"@pixi/math":59}],67:[function(require,module,exports) {
+},{"@pixi/display":54,"@pixi/math":74}],79:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -40789,7 +40789,7 @@ exports.SimpleMesh = SimpleMesh;
 exports.SimplePlane = SimplePlane;
 exports.SimpleRope = SimpleRope;
 //# sourceMappingURL=mesh-extras.es.js.map
-},{"@pixi/mesh":50,"@pixi/constants":49,"@pixi/core":58}],65:[function(require,module,exports) {
+},{"@pixi/mesh":76,"@pixi/constants":61,"@pixi/core":50}],56:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -41271,7 +41271,7 @@ var AnimatedSprite = /** @class */function (_super) {
 
 exports.AnimatedSprite = AnimatedSprite;
 //# sourceMappingURL=sprite-animated.es.js.map
-},{"@pixi/core":58,"@pixi/sprite":79,"@pixi/ticker":69}],41:[function(require,module,exports) {
+},{"@pixi/core":50,"@pixi/sprite":75,"@pixi/ticker":63}],22:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -42926,7 +42926,7 @@ exports.VERSION = VERSION;
 exports.filters = filters;
 exports.useDeprecated = useDeprecated;
 //# sourceMappingURL=pixi.es.js.map
-},{"@pixi/polyfill":66,"@pixi/utils":51,"@pixi/accessibility":74,"@pixi/interaction":55,"@pixi/app":78,"@pixi/core":58,"@pixi/extract":57,"@pixi/loaders":73,"@pixi/particles":80,"@pixi/prepare":54,"@pixi/spritesheet":62,"@pixi/sprite-tiling":64,"@pixi/text-bitmap":56,"@pixi/ticker":69,"@pixi/filter-alpha":72,"@pixi/filter-blur":53,"@pixi/filter-color-matrix":81,"@pixi/filter-displacement":63,"@pixi/filter-fxaa":71,"@pixi/filter-noise":77,"@pixi/mixin-cache-as-bitmap":75,"@pixi/mixin-get-child-by-name":70,"@pixi/mixin-get-global-position":60,"@pixi/constants":49,"@pixi/display":52,"@pixi/graphics":61,"@pixi/math":59,"@pixi/mesh":50,"@pixi/mesh-extras":67,"@pixi/runner":76,"@pixi/sprite":79,"@pixi/sprite-animated":65,"@pixi/text":82,"@pixi/settings":68}],20:[function(require,module,exports) {
+},{"@pixi/polyfill":58,"@pixi/utils":69,"@pixi/accessibility":52,"@pixi/interaction":49,"@pixi/app":71,"@pixi/core":50,"@pixi/extract":53,"@pixi/loaders":80,"@pixi/particles":57,"@pixi/prepare":64,"@pixi/spritesheet":72,"@pixi/sprite-tiling":67,"@pixi/text-bitmap":70,"@pixi/ticker":63,"@pixi/filter-alpha":51,"@pixi/filter-blur":55,"@pixi/filter-color-matrix":66,"@pixi/filter-displacement":68,"@pixi/filter-fxaa":82,"@pixi/filter-noise":59,"@pixi/mixin-cache-as-bitmap":81,"@pixi/mixin-get-child-by-name":73,"@pixi/mixin-get-global-position":60,"@pixi/constants":61,"@pixi/display":54,"@pixi/graphics":78,"@pixi/math":74,"@pixi/mesh":76,"@pixi/mesh-extras":79,"@pixi/runner":62,"@pixi/sprite":75,"@pixi/sprite-animated":56,"@pixi/text":77,"@pixi/settings":65}],20:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -43003,7 +43003,7 @@ const spriteFrames = {
 function GetSprite(name) {
   return new PIXI.AnimatedSprite(spriteFrames[name].map(path => PIXI.Texture.from(path)));
 }
-},{"./images/Space/astronaut/*.png":22,"./images/Space/obstacle1/*.png":23,"./images/Space/obstacle2/*.png":24,"./images/Space/obstacle3/*.png":25,"./images/Space/obstacle4/*.png":26,"./images/Space/starimage/*.png":27,"./images/Space/starimage-color/*.png":28,"./images/Space/start/*.png":29,"./images/Space/background/*.png":30,"./images/Space/popup/*.png":31,"pixi.js":41}],18:[function(require,module,exports) {
+},{"./images/Space/astronaut/*.png":23,"./images/Space/obstacle1/*.png":24,"./images/Space/obstacle2/*.png":25,"./images/Space/obstacle3/*.png":26,"./images/Space/obstacle4/*.png":27,"./images/Space/starimage/*.png":28,"./images/Space/starimage-color/*.png":29,"./images/Space/start/*.png":30,"./images/Space/background/*.png":31,"./images/Space/popup/*.png":32,"pixi.js":22}],19:[function(require,module,exports) {
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Player = void 0;
@@ -43057,7 +43057,7 @@ var Player = /** @class */ (function () {
 }());
 exports.Player = Player;
 //# sourceMappingURL=player.js.map
-},{"../assets/loader":20,"./app":16}],19:[function(require,module,exports) {
+},{"../assets/loader":20,"./app":15}],21:[function(require,module,exports) {
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.SpaceDebris = void 0;
@@ -43083,20 +43083,20 @@ var SpaceDebris = /** @class */ (function () {
 }());
 exports.SpaceDebris = SpaceDebris;
 //# sourceMappingURL=spaceDebris.js.map
-},{"../assets/loader":20,"./app":16}],21:[function(require,module,exports) {
+},{"../assets/loader":20,"./app":15}],18:[function(require,module,exports) {
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.listOfSpaceJunkFacts = void 0;
 exports.listOfSpaceJunkFacts = [
-    'A piece of space debris can reach speeds of 4.3 to \n 5 miles  per second. That’s nearly 7 times faster\n than a bullet and just about the equivalent \n of being hit by a bowling ball moving at 300 miles \n per hour.',
-    'There are about 4,700 satellites still in space, \n but only an approximate 1,800 are still working!',
-    'In one year, the International Space Station had to \n coordinate three shifts in position to avoid \n disastrous collisions with space debris, \n a feat that requires days of effort.',
-    'According to the National Oceanic and Atmospheric \n Administration, an average total between 200 – 400 \n tracked space debris enter Earth’s \n atmosphere every year.',
-    'The U.S. Air Force is working on a program called Space\n Fence to help track the current amount of debris in \n orbit and extend a “virtual fence” around the planet.',
-    'In September of 2018, scientists successfully tested \n a net to help snag orbiting debris and burn it in \n Earth’s atmosphere.'
+    'A piece of space debris can reach speeds of 4.3 to\n5 miles  per second. That’s nearly 7 times faster\nthan a bullet and just about the equivalent\n of being hit by a bowling ball moving at 300 miles\nper hour.',
+    'There are about 4,700 satellites still in space,\nbut only an approximate 1,800 are still working!',
+    'In one year, the International Space Station had to\ncoordinate three shifts in position to avoid\n disastrous collisions with space debris,\na feat that requires days of effort.',
+    'According to the National Oceanic and Atmospheric\nAdministration, an average total between 200 – 400\ntracked space debris enter Earth’s\n atmosphere every year.',
+    'The U.S. Air Force is working on a program called\nSpace Fence to help track the current amount of\ndebris in orbit and extend a “virtual fence” around\nthe planet.',
+    'In September of 2018, scientists successfully tested\na net to help snag orbiting debris and burn it in\nEarth’s atmosphere.'
 ];
 //# sourceMappingURL=listOfSpaceJunkFacts.js.map
-},{}],16:[function(require,module,exports) {
+},{}],15:[function(require,module,exports) {
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.GameApp = void 0;
@@ -43304,7 +43304,7 @@ var GameApp = /** @class */ (function () {
 }());
 exports.GameApp = GameApp;
 //# sourceMappingURL=app.js.map
-},{"../assets/loader":20,"pixi.js":41,"../app/player":18,"../app/spaceDebris":19,"./listOfSpaceJunkFacts":21}],11:[function(require,module,exports) {
+},{"../assets/loader":20,"pixi.js":22,"../app/player":19,"../app/spaceDebris":21,"./listOfSpaceJunkFacts":18}],10:[function(require,module,exports) {
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var app_1 = require("./app/app");
@@ -43312,7 +43312,7 @@ var app_1 = require("./app/app");
 // document.body: html file
 var myGame = new app_1.GameApp(document.body, 500, 230);
 //# sourceMappingURL=main.js.map
-},{"./app/app":16}],0:[function(require,module,exports) {
+},{"./app/app":15}],0:[function(require,module,exports) {
 var global = (1, eval)('this');
 var OldModule = module.bundle.Module;
 function Module() {
@@ -43330,7 +43330,7 @@ function Module() {
 module.bundle.Module = Module;
 
 if (!module.bundle.parent && typeof WebSocket !== 'undefined') {
-  var ws = new WebSocket('ws://localhost:52503/');
+  var ws = new WebSocket('ws://localhost:52628/');
   ws.onmessage = function(event) {
     var data = JSON.parse(event.data);
 
@@ -43431,4 +43431,4 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.require, id)
   });
 }
-},{}]},{},[0,11])
+},{}]},{},[0,10])
