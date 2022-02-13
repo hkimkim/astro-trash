@@ -2,6 +2,7 @@ import { GetSprite } from '../assets/loader';
 import * as PIXI from 'pixi.js';
 import { Player } from '../app/player'
 import { SpaceDebris } from '../app/spaceDebris';
+import { listOfSpaceJunkFacts } from "./listOfSpaceJunkFacts";
 
 
 export declare type spaceObject = Player | SpaceDebris
@@ -12,11 +13,11 @@ export class GameApp {
 
     // Set up score board
     static ScoreBoard: PIXI.Text = new PIXI.Text("Score: ", {
-        fontSize: 5,
-        fill: "#aaff",
+        fontSize: 10,
+        fill: 0xffffff,
         align: "center",
         stroke: "#aaaaaa",
-        strokeThickness: 0
+        strokeThickness: 1
     });
 
     static startMessage = new PIXI.Text('Press Space to Start', {
@@ -27,9 +28,20 @@ export class GameApp {
         fontSize: 7,
     });
 
+    static replayMessage = new PIXI.Text('Press Space to Replay', {
+        fill : 0x000000,
+        align : 'center',
+        height: 20,
+        width: 30,
+        fontSize: 7,
+        stroke: 0xffffff,
+        strokeThickness: 1
+    });
+
     static startScreen: PIXI.Sprite;
     static background: PIXI.Sprite;
     static popUp: PIXI.Sprite;
+    static randomFact: PIXI.text;
 
     static Stage: PIXI.Container;
     static Width = 0;
@@ -57,8 +69,6 @@ export class GameApp {
         this.app = new PIXI.Application({
             width, 
             height, 
-            // TODO: change background
-            backgroundColor : 0xffffff,
             resolution: 3,
         });
         PIXI.settings.SCALE_MODE = PIXI.SCALE_MODES.NEAREST;
@@ -92,8 +102,10 @@ export class GameApp {
 
             // Update the display
             if (!GameApp.Play && GameApp.Score != 0 ) {
-                GameApp.ScoreBoard.text = "Game Over PUNK!"
+                GameApp.ScoreBoard.text = "Game Over!"
                 GameApp.Stage.addChild(GameApp.popUp);
+                GameApp.Stage.addChild(GameApp.randomFact);
+                GameApp.Stage.addChild(GameApp.replayMessage);
             } else {
                 GameApp.ScoreBoard.text = "Score: " + GameApp.Score.toFixed(0);
             }
@@ -126,6 +138,23 @@ export class GameApp {
         GameApp.popUp = GetSprite("popup");
         GameApp.popUp.x = (this.Width + 1) / 3 + 10;
         GameApp.popUp.y = this.Size / 3 - 10;
+        let chosenRandomFact= listOfSpaceJunkFacts[Math.floor(listOfSpaceJunkFacts.length * Math.random())];
+
+        GameApp.randomFact = new PIXI.Text("FACT: \n" + chosenRandomFact,
+            {
+            fontSize: 4.5,
+            fill : 0x000000,
+            align : 'left',
+            cacheAsBitmap: true, 
+            height: 20,
+            width: 30,
+        });    
+
+        GameApp.randomFact.x = (this.Width + 1) / 4 + 75;
+        GameApp.randomFact.y = (this.Size / 2) - 30;
+
+        GameApp.replayMessage.position.x = ((this.Width + 1) / 2) - 35;
+        GameApp.replayMessage.position.y = (this.Size / 2) + 20;
 
         if (flag){
             // Add start screen background
@@ -152,6 +181,8 @@ export class GameApp {
             }
             else{
                 GameApp.Stage.removeChild(GameApp.popUp);
+                GameApp.Stage.removeChild(GameApp.randomFact);
+                GameApp.Stage.removeChild(GameApp.replayMessage);
             }
 
             // update entities in current frame
@@ -169,7 +200,6 @@ export class GameApp {
             
             // Add space debris obstacles
             if (GameApp.ShouldPlaceNextSpaceDebris()) {
-                // TODO: this doesn't work!
                 let obstacleList = ['obstacle1', 'obstacle2', 'obstacle3', 'obstacle4'];
                 let randomObstacle= obstacleList[Math.floor(obstacleList.length * Math.random())];
                 let randomPosition = this.getRandomInt(0, 180);
@@ -182,9 +212,6 @@ export class GameApp {
                 console.log("game score:" + GameApp.Score);
                 console.log("next score: " + this.ScoreNextObstacle);
             }
-
-            // Add star image
-            // GameApp.AddSpaceDebris("starimage", 20, false);
 
 
         } else {
@@ -214,7 +241,6 @@ export class GameApp {
         let difficulty = Math.min(this.Score / 100, 5);
 
         // define the random value based on values above
-        // console.log( (Math.random() * 10 - (difficulty * 4)) + minimumDistance);
         return (Math.random() - (difficulty * 1)) + minimumDistance;
     }
 
