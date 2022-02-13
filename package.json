@@ -2,14 +2,14 @@
   "name": "pixitest",
   "version": "1.0.0",
   "description": "",
+  "homepage": ".",
   "scripts": {
     "test": "jest",
     "start": "npm run clean && parcel src/index.html",
     "build": "npm run clean && parcel build src/index.html --public-url ./",
     "build_serve": "npm run build && http-server ./dist",
     "clean": "rimraf ./dist ./.cache",
-    "rimraf": "./node_modules/rimraf/bin.js",
-    "heroku-postbuild" : "parcel build src/index.html"
+    "rimraf": "./node_modules/rimraf/bin.js"
   },
   "author": "Llorenç Pujol Ferriol",
   "license": "MIT",
