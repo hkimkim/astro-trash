@@ -1,4 +1,6 @@
-# Hackbeanpot 2022 Team Spirit
+# Astro Trash!
+
+Hackbeanpot 2022  
 Feb 11, 2022 - Feb 13, 2022
 
 ## Team members:
@@ -34,7 +36,7 @@ Source: https://www.zmescience.com/other/feature-post/spack-junk-10112021/
 ## Running the project
 ```
  npm install  
- npm build 
+ npm start 
 ```
 
 ## Reference
