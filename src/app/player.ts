@@ -71,11 +71,8 @@ export class Player {
             console.log(this.speed);
         }
         else{
-            if (GameApp.PressedDown && this.speed < 0){
-            this.speed *= -1;
-            }
-            else if (GameApp.PressedUp && this.speed > 0 ){
-            this.speed *= -1;
+            if ((GameApp.PressedDown && this.speed < 0) || (GameApp.PressedUp && this.speed > 0)){
+                this.speed *= -1;
             }
         }
         
