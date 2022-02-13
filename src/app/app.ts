@@ -5,16 +5,6 @@ import { SpaceDebris } from '../app/spaceDebris';
 
 
 export declare type spaceObject = Player | SpaceDebris
-export let listOfSpaceJunkFacts: string[] = [
-    'A piece of space debris can reach speeds of 4.3 to 5 miles per second. That’s nearly 7 times faster than a bullet and just about the equivalent of being hit by a bowling ball moving at 300 miles per hour.',
-    'There are about 4,700 satellites still in space, but only an approximate 1,800 are still working. All space trash!',
-    'In one year, the International Space Station had to coordinate three shifts in position to avoid disastrous collisions with space debris, a feat that requires days of effort',
-    'According to the National Oceanic and Atmospheric Administration, an average total between 200 – 400 tracked space debris enter Earth’s atmosphere every year',
-]; 
-
-
-// Prepare frames
-// const playerFrames: GetSprite = spriteFrames;
 
 export class GameApp {
 
@@ -29,10 +19,19 @@ export class GameApp {
         strokeThickness: 0
     });
 
+    static startMessage = new PIXI.Text('Press Space to Start', {
+        fill : 0x000000,
+        align : 'center',
+        height: 20,
+        width: 30,
+        fontSize: 7,
+    });
+
+
     static Stage: PIXI.Container;
     static Width = 0;
     static Size = 0;
-    static Play: boolean = true;
+    static Play: boolean = false;
 
     static PressedUp = false;
     static PressedDown = false;
@@ -54,8 +53,7 @@ export class GameApp {
         this.app = new PIXI.Application({
             width, 
             height, 
-            // TODO: change background to background image
-            antialias: false,
+            // TODO: change background
             backgroundColor : 0xffffff,
             resolution: 3,
         });
@@ -71,7 +69,7 @@ export class GameApp {
         window.onkeydown = (ev: KeyboardEvent): any => {
             if (ev.key == " ") {
                 GameApp.PressedSpace = true;
-                console.log("space pressed")
+                console.log("pressed space")
             } 
 
             if (ev.key == "ArrowDown" || ev.key == "s") {
@@ -91,10 +89,10 @@ export class GameApp {
             GameApp.Update(delta);
 
             // Update the display
-            if (GameApp.Play) {
-                GameApp.ScoreBoard.text = "Score: " + GameApp.Score;
-            } else {
+            if (!GameApp.Play && GameApp.Score != 0 ) {
                 GameApp.ScoreBoard.text = "Game Over PUNK!"
+            } else {
+                GameApp.ScoreBoard.text = "Score: " + GameApp.Score;
             }
         });
     }
@@ -109,16 +107,28 @@ export class GameApp {
         let player = new Player();
         GameApp.ActiveEntites.push(player);
 
+        // Add start screen
+        GameApp.startMessage.position.x = 120;
+        GameApp.startMessage.position.y = 60;
+        GameApp.Stage.addChild(GameApp.startMessage);
+
         // Add score board to stage
         GameApp.Stage.addChild(GameApp.ScoreBoard);
-        // GameApp.Stage.addChild(player);
         this.ScoreNextObstacle = 0;
-        console.log("Setup game run")
+        console.log("Game setup done")
     }
 
     static Update(delta: number) {
+
+        if (this.PressedSpace) {
+            GameApp.Stage.removeChild(GameApp.startMessage)
+            this.Play = true;
+            this.PressedSpace = false;
+        }
+
         if (this.Play) {
-            console.log()
+
+            // update entities in current frame
             for (let i = 0; i < GameApp.ActiveEntites.length; i++) {
                 const currentEntity = GameApp.ActiveEntites[i];
                 currentEntity.Update(delta, GameApp.ActiveEntites);
@@ -127,15 +137,28 @@ export class GameApp {
                   currentEntity.sprite.destroy();
                   GameApp.ActiveEntites.splice(i, 1);
                 }
-              }
-            // TODO: Loop over current activity space objects
-            // and Update the current entity (could be player or space debris)
+            }
            
-            this.Score += delta / 6;
+            this.Score += delta / 50;
+            
+            // Add space debris obstacles
+            if (GameApp.ShouldPlaceNextSpaceDebris()) {
+                // TODO: this doesn't work!
+                let obstacleList = ['obstacle1', 'obstacle2', 'obstacle3', 'obstacle4'];
+                let randomValue = obstacleList[Math.floor(obstacleList.length * Math.random())];
+
+                GameApp.AddSpaceDebris('obstacle2', 60, true);
+            }
+
+            // Add star image
+            // GameApp.AddSpaceDebris("astronaut", 20, false);
+
 
             // TODO: Update the score
             // TODO: Check if current score is bigger than max score then set new max score
             // TODO: Check if new space debris needs to be shown on stage
+
+
 
         } else {
             // When spaced pressed to start the game
@@ -152,8 +175,16 @@ export class GameApp {
 
     // Calculates the "hypothetical" score if user jumps the next space debris
     // TODO: think of a model for calculating scores
+    // currently cp the code
     static calculateNextSpaceDebrisScore(): number {
-        
+        // let's have a minimum distance so objects don't appear next to each other
+        let minimumDistance = 25;
+
+        // we can define a level of difficulty to make it harder as we go on (limit is 5)
+        let difficulty = Math.min(this.Score / 100, 5);
+
+        // define the random value based on values above
+        return (Math.random() * 10 - (difficulty * 4)) + minimumDistance;
     }
 
 
@@ -161,6 +192,8 @@ export class GameApp {
     // make random
     // TODO: Qiana
     static ShouldPlaceNextSpaceDebris(): boolean {
+        // return (this.Score >=  this.ScoreNextObstacle);
+
         return true;
     }
 
