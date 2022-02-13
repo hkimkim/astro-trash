@@ -27,11 +27,15 @@ export class GameApp {
         fontSize: 7,
     });
 
+    static startScreen: PIXI.Sprite;
+    static background: PIXI.Sprite;
+    static popUp: PIXI.Sprite;
 
     static Stage: PIXI.Container;
     static Width = 0;
     static Size = 0;
     static Play: boolean = false;
+    static flag: boolean;
 
     static PressedUp = false;
     static PressedDown = false;
@@ -69,21 +73,19 @@ export class GameApp {
         window.onkeydown = (ev: KeyboardEvent): any => {
             if (ev.key == " ") {
                 GameApp.PressedSpace = true;
-                console.log("pressed space")
             } 
 
             if (ev.key == "ArrowDown" || ev.key == "s") {
                 GameApp.PressedDown = true;
-                console.log("pressed down")
             }
 
             if (ev.key == "ArrowUp" || ev.key == "w") {
                 GameApp.PressedUp = true;
-                console.log("pressed up ")
             }
           };
 
-        GameApp.SetUpGame();           
+        GameApp.flag = true;
+        GameApp.SetUpGame(GameApp.flag);           
 
         this.app.ticker.add((delta) => {
             GameApp.Update(delta);
@@ -91,42 +93,66 @@ export class GameApp {
             // Update the display
             if (!GameApp.Play && GameApp.Score != 0 ) {
                 GameApp.ScoreBoard.text = "Game Over PUNK!"
+                GameApp.Stage.addChild(GameApp.popUp);
             } else {
-                GameApp.ScoreBoard.text = "Score: " + GameApp.Score;
+                GameApp.ScoreBoard.text = "Score: " + GameApp.Score.toFixed(0);
             }
         });
     }
 
     // Sets game stage
-    static SetUpGame() {
+    static SetUpGame(flag: boolean) {
         this.Score = 0;
         this.ActiveEntites = new Array<spaceObject>();
-        this.Stage.removeChild();
+        this.Stage.removeChildren();
+
+        // Creates background
+        GameApp.background = GetSprite("background");
+        GameApp.background.x = 0;
+        GameApp.background.y = 0;
+        GameApp.background.width = (this.Width + 1);
+        GameApp.background.height = this.Size;
+        GameApp.Stage.addChild(GameApp.background);
 
         // Initalize player
         let player = new Player();
         GameApp.ActiveEntites.push(player);
 
-        // Add start screen
-        GameApp.startMessage.position.x = 120;
-        GameApp.startMessage.position.y = 60;
-        GameApp.Stage.addChild(GameApp.startMessage);
-
         // Add score board to stage
         GameApp.Stage.addChild(GameApp.ScoreBoard);
         this.ScoreNextObstacle = 0;
-        console.log("Game setup done")
+
+        // Set up for pop-up facts
+        GameApp.popUp = GetSprite("popup");
+        GameApp.popUp.x = (this.Width + 1) / 3 + 10;
+        GameApp.popUp.y = this.Size / 3 - 10;
+
+        if (flag){
+            // Add start screen background
+            GameApp.startScreen = GetSprite("start");
+            GameApp.startScreen.x = 0;
+            GameApp.startScreen.y = 0;
+            GameApp.startScreen.width = (this.Width + 1);
+            GameApp.startScreen.height = this.Size;
+            GameApp.Stage.addChild(GameApp.startScreen);
+
+            // Add start screen
+            GameApp.startMessage.position.x = ((this.Width + 1) / 2) - 30;
+            GameApp.startMessage.position.y = (this.Size / 2) + 5;
+            GameApp.Stage.addChild(GameApp.startMessage);
+        }
     }
 
     static Update(delta: number) {
 
-        if (this.PressedSpace) {
-            GameApp.Stage.removeChild(GameApp.startMessage)
-            this.Play = true;
-            this.PressedSpace = false;
-        }
-
-        if (this.Play) {
+        if (this.Play){
+            if (GameApp.flag){
+                GameApp.Stage.removeChild(GameApp.startMessage)
+                GameApp.Stage.removeChild(GameApp.startScreen);
+            }
+            else{
+                GameApp.Stage.removeChild(GameApp.popUp);
+            }
 
             // update entities in current frame
             for (let i = 0; i < GameApp.ActiveEntites.length; i++) {
@@ -165,12 +191,12 @@ export class GameApp {
             // When spaced pressed to start the game
 
             if (GameApp.PressedSpace) {
-                this.Play = false;
-                this.SetUpGame();
+                GameApp.flag = false;
+                GameApp.SetUpGame(GameApp.flag);
+                GameApp.Play = true;
             }
-
-            GameApp.PressedSpace = false;
         }
+        GameApp.PressedSpace = false;
     }
 
     private static getRandomInt(min, max) {

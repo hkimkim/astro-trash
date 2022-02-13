@@ -43,7 +43,6 @@ export class Player {
         
         if (this.sprite.y > GameApp.Size || this.sprite.y < this.sprite.height + 5){
             this.speed *= -1;
-            console.log(this.speed);
         }
         else {
             if ((GameApp.PressedDown && this.speed < 0) || (GameApp.PressedUp && this.speed > 0)){
