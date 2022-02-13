@@ -1,9 +1,17 @@
 import { GetSprite } from '../assets/loader';
 import * as PIXI from 'pixi.js';
 import { Player } from '../app/player'
-import { SpaceDebris } from './spaceDebris';
+import { SpaceDebris } from '../app/spaceDebris';
 
-type spaceObject = Player | SpaceDebris
+
+export declare type spaceObject = Player | SpaceDebris
+export let listOfSpaceJunkFacts: string[] = [
+    'A piece of space debris can reach speeds of 4.3 to 5 miles per second. That’s nearly 7 times faster than a bullet and just about the equivalent of being hit by a bowling ball moving at 300 miles per hour.',
+    'There are about 4,700 satellites still in space, but only an approximate 1,800 are still working. All space trash!',
+    'In one year, the International Space Station had to coordinate three shifts in position to avoid disastrous collisions with space debris, a feat that requires days of effort',
+    'According to the National Oceanic and Atmospheric Administration, an average total between 200 – 400 tracked space debris enter Earth’s atmosphere every year',
+]; 
+
 
 // Prepare frames
 // const playerFrames: GetSprite = spriteFrames;
@@ -14,14 +22,16 @@ export class GameApp {
 
     // Set up score board
     static ScoreBoard: PIXI.Text = new PIXI.Text("Score: ", {
-        fontSize: 7,
+        fontSize: 5,
+        fill: "#aaff",
         align: "center",
-        fill: "#ffffff",
+        stroke: "#aaaaaa",
+        strokeThickness: 0
     });
 
     static Stage: PIXI.Container;
     static Width = 0;
-    static Play: boolean = false;
+    static Play: boolean = true;
 
     static PressedUp = false;
     static PressedDown = false;
@@ -44,7 +54,8 @@ export class GameApp {
             width, 
             height, 
             // TODO: change background to background image
-            backgroundColor : 0x000000,
+            antialias: false,
+            backgroundColor : 0xffffff,
             resolution: 3,
         });
         PIXI.settings.SCALE_MODE = PIXI.SCALE_MODES.NEAREST;
@@ -63,19 +74,26 @@ export class GameApp {
 
             if (ev.key == "ArrowDown" || ev.key == "w") {
                 GameApp.PressedDown = true;
-                console.log("pressed arrow down")
+                console.log("pressed down")
             }
 
-            if (ev.key == "ArrowUp" || ev.key == "s") {
+            if (ev.key == "ArrowUp" || ev.key == "d") {
                 GameApp.PressedUp = true;
-                console.log("pressed space pressed")
+                console.log("pressed up ")
             }
           };
 
-        GameApp.SetUpGame();            
+        GameApp.SetUpGame();           
 
         this.app.ticker.add((delta) => {
-            GameApp.Update(delta)
+            GameApp.Update(delta);
+
+            // Update the display
+            if (GameApp.Play) {
+                GameApp.ScoreBoard.text = "Score: " + GameApp.Score;
+            } else {
+                GameApp.ScoreBoard.text = "Game Over PUNK!"
+            }
         });
     }
 
@@ -98,10 +116,21 @@ export class GameApp {
 
     static Update(delta: number) {
         if (this.Play) {
-            
+            console.log()
+            for (let i = 0; i < GameApp.ActiveEntites.length; i++) {
+                const currentEntity = GameApp.ActiveEntites[i];
+                currentEntity.Update(delta, GameApp.ActiveEntites);
+        
+                if (currentEntity.sprite.x < -20) {
+                  currentEntity.sprite.destroy();
+                  GameApp.ActiveEntites.splice(i, 1);
+                }
+              }
             // TODO: Loop over current activity space objects
             // and Update the current entity (could be player or space debris)
            
+            this.Score += delta / 6;
+
             // TODO: Update the score
             // TODO: Check if current score is bigger than max score then set new max score
             // TODO: Check if new space debris needs to be shown on stage
@@ -128,6 +157,7 @@ export class GameApp {
 
     // Checks if next space debris needs to be place on screen
     // make random
+    // TODO: Qiana
     static ShouldPlaceNextSpaceDebris(): boolean {
         return true;
     }

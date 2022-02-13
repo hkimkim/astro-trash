@@ -1,9 +1,8 @@
 import { GetSprite } from "../assets/loader"
-import * as PIXI from "pixi.js"
+import * as PIXI from 'pixi.js';
 import { GameApp } from "./app"; 
 
 export class SpaceDebris {
-
     sprite: PIXI.AnimatedSprite;
     solid: boolean = true;
     
@@ -15,6 +14,10 @@ export class SpaceDebris {
     }
 
     // TODO: function that updates the distance 
-    public Update() {}
+    public Update(delta: number) {
+        // calculate where the junk should be placed on the screen
+        let scrollSpeed = GameApp.spaceDebrisSpeed + Math.min(GameApp.Score / 15.0, 1);
+        this.sprite.x -= delta * scrollSpeed
+    }
 }
 

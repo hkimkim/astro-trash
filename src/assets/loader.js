@@ -1,7 +1,7 @@
 /**
  * Loads game assets
  */
-import astronaut from './images/Space/astronaut.png';
+import astronaut from './images/Space/astronaut/*.png';
 import spaceDebrisOne from './images/Space/spaceDebrisOne.png';
 import spaceDebrisTwo from './images/Space/spaceDebrisTwo.png';
 import spaceDebrisThree from './images/Space/spaceDebrisThree.png';
@@ -23,6 +23,22 @@ const spriteFrames = {
 // Adds texture to game assets
 export function GetSprite(name) {
     return new PIXI.AnimatedSprite(
-        spriteFrames[name].map((path) => PIXI.Texture.from(path))
-    );
+        spriteFrames[name].map(path => PIXI.Texture.from(path)));
 }
+
+// import ghost from './images/Ghost/ghost/*.png';
+// import cloud from './images/Ghost/cloud/*.png';
+// import obstacle1 from './images/Ghost/obstacle1/*.png';
+// import obstacle2 from './images/Ghost/obstacle2/*.png';
+// import * as PIXI from 'pixi.js';
+
+// const spriteNames = {
+//     ghost: Object.values(ghost),
+//     obstacleGrave: Object.values(obstacle1),
+//     obstaclePumpkin: Object.values(obstacle2),
+//     cloud: Object.values(cloud),
+// };
+
+// export function GetSprite(name) {
+//     return new PIXI.AnimatedSprite(spriteNames[name].map(path => PIXI.Texture.from(path)))
+// }
