@@ -31,6 +31,7 @@ export class GameApp {
 
     static Stage: PIXI.Container;
     static Width = 0;
+    static Size = 0;
     static Play: boolean = true;
 
     static PressedUp = false;
@@ -62,6 +63,7 @@ export class GameApp {
 
         GameApp.Stage = this.app.stage;
         GameApp.Width = width - 1;
+        GameApp.Size = height;
 
         parent.replaceChild(this.app.view, parent.lastElementChild);
 
@@ -72,12 +74,12 @@ export class GameApp {
                 console.log("space pressed")
             } 
 
-            if (ev.key == "ArrowDown" || ev.key == "w") {
+            if (ev.key == "ArrowDown" || ev.key == "s") {
                 GameApp.PressedDown = true;
                 console.log("pressed down")
             }
 
-            if (ev.key == "ArrowUp" || ev.key == "d") {
+            if (ev.key == "ArrowUp" || ev.key == "w") {
                 GameApp.PressedUp = true;
                 console.log("pressed up ")
             }
