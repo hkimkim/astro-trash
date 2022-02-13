@@ -31,9 +31,15 @@ Source: https://www.zmescience.com/other/feature-post/spack-junk-10112021/
 - Parcel
 - Node
 
+## Running the project
+```
+ npm install  
+ npm build 
+```
 
 ## Reference
 
 We followed this [tutorial](https://nosleepjavascript.com/intro-to-gamedev/) to learn how to make web dev games with typescript!
+
 
 
