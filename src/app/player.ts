@@ -7,14 +7,15 @@ import { spaceObject } from "./app";
 
 export class Player {
     sprite: PIXI.AnimatedSprite;
-    // isMidPlane: Boolean; 
+    speed: number;
 
     public constructor() {
         this.sprite = GetSprite("astronaut");
         // starting position of the astronaut
-        this.sprite.x = 5; 
-        this.sprite.y = 0;
-        this.sprite.anchor.set(0, -2);
+        this.sprite.x = 20; 
+        this.sprite.y = 100;
+        this.speed = 1;
+        this.sprite.anchor.set(0, 1);
         this.sprite.animationSpeed = 0.05;
         this.sprite.play();
 
@@ -22,6 +23,10 @@ export class Player {
     }
 
     private checkCollide(otherSprite: PIXI.Sprite) {
+        if (this.sprite == otherSprite){
+            return false;
+        }
+
         let playerBounds = this.sprite.getBounds();
         let SpaceDebrisBounds = otherSprite.getBounds();
 
@@ -40,7 +45,7 @@ export class Player {
         // TODO: Set boundaries so that it doesn't go out of the screen
 
         // check if key pressed down and move downwards
-        if (GameApp.PressedDown) {
+        /*if (GameApp.PressedDown) {
             // this is just an inital number
             this.sprite.y += delta * 5; 
             this.sprite.x += delta * 2;
@@ -52,7 +57,7 @@ export class Player {
             this.sprite.y -= delta * 5;
             this.sprite.x += delta * 2;
             GameApp.PressedUp = false;
-        }
+        }*/
 
         // check if user is colliding with any of the entity
         // for (const currentEntity of GameApp.ActiveEntites) {
@@ -60,5 +65,29 @@ export class Player {
         //         GameApp.Play = false;
         //     }
         // }
+        
+        if (this.sprite.y > GameApp.Size || this.sprite.y < this.sprite.height + 5){
+            this.speed *= -1;
+            console.log(this.speed);
+        }
+        else{
+            if (GameApp.PressedDown && this.speed < 0){
+            this.speed *= -1;
+            }
+            else if (GameApp.PressedUp && this.speed > 0 ){
+            this.speed *= -1;
+            }
+        }
+        
+        GameApp.PressedUp = false;
+        GameApp.PressedDown = false;
+        console.log(this.speed);
+        this.sprite.y += this.speed * delta;
+         
+        for (const currentEntity of GameApp.ActiveEntites) {
+            if (this.checkCollide(currentEntity.sprite)) {
+                GameApp.Play = false;
+            }
+        }
     }
 }
