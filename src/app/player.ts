@@ -2,6 +2,7 @@ import { GetSprite } from "../assets/loader"
 import * as PIXI from 'pixi.js';
 import { GameApp } from "./app"; 
 import { spaceObject } from "./app";
+import { SpaceDebris } from "./spaceDebris";
 
 export class Player {
     sprite: PIXI.AnimatedSprite;

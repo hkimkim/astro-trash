@@ -139,25 +139,26 @@ export class GameApp {
                 }
             }
            
-            this.Score += delta / 50;
+            this.Score += delta / 40;
             
             // Add space debris obstacles
             if (GameApp.ShouldPlaceNextSpaceDebris()) {
                 // TODO: this doesn't work!
                 let obstacleList = ['obstacle1', 'obstacle2', 'obstacle3', 'obstacle4'];
-                let randomValue = obstacleList[Math.floor(obstacleList.length * Math.random())];
+                let randomObstacle= obstacleList[Math.floor(obstacleList.length * Math.random())];
+                let randomPosition = this.getRandomInt(0, 180);
 
-                GameApp.AddSpaceDebris('obstacle2', 60, true);
+                console.log("chosen obstcle: ", randomObstacle);
+                console.log("chosen position: ", randomPosition);
+                GameApp.AddSpaceDebris(randomObstacle, randomPosition, true);
+
+                this.ScoreNextObstacle += this.calculateNextSpaceDebrisScore();
+                console.log("game score:" + GameApp.Score);
+                console.log("next score: " + this.ScoreNextObstacle);
             }
 
             // Add star image
-            // GameApp.AddSpaceDebris("astronaut", 20, false);
-
-
-            // TODO: Update the score
-            // TODO: Check if current score is bigger than max score then set new max score
-            // TODO: Check if new space debris needs to be shown on stage
-
+            // GameApp.AddSpaceDebris("starimage", 20, false);
 
 
         } else {
@@ -172,29 +173,29 @@ export class GameApp {
         }
     }
 
+    private static getRandomInt(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max); 
+        return Math.floor(Math.random() * (max - min)) + min; 
+    } 
 
     // Calculates the "hypothetical" score if user jumps the next space debris
-    // TODO: think of a model for calculating scores
-    // currently cp the code
     static calculateNextSpaceDebrisScore(): number {
         // let's have a minimum distance so objects don't appear next to each other
-        let minimumDistance = 25;
+        let minimumDistance = 1;
 
         // we can define a level of difficulty to make it harder as we go on (limit is 5)
         let difficulty = Math.min(this.Score / 100, 5);
 
         // define the random value based on values above
-        return (Math.random() * 10 - (difficulty * 4)) + minimumDistance;
+        // console.log( (Math.random() * 10 - (difficulty * 4)) + minimumDistance);
+        return (Math.random() - (difficulty * 1)) + minimumDistance;
     }
 
 
     // Checks if next space debris needs to be place on screen
-    // make random
-    // TODO: Qiana
     static ShouldPlaceNextSpaceDebris(): boolean {
-        // return (this.Score >=  this.ScoreNextObstacle);
-
-        return true;
+        return (this.Score >=  this.ScoreNextObstacle);
     }
 
     // Add new SpaceDebris to stage

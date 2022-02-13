@@ -15,9 +15,13 @@ export class SpaceDebris {
 
     // TODO: function that updates the distance 
     public Update(delta: number) {
-        // calculate where the junk should be placed on the screen
-        let scrollSpeed = GameApp.spaceDebrisSpeed + Math.min(GameApp.Score / 15.0, 1);
-        this.sprite.x -= delta * scrollSpeed * 30;
+        let baseScrollSpeed = (this.solid) ? GameApp.spaceDebrisSpeed : GameApp.spaceDebrisSpeed - 1;
+
+        // modifier for speed depending on score so that it gets more difficult
+        let scrollSpeed = baseScrollSpeed + Math.min(GameApp.Score / 100 , 1);
+  
+        // move to the left, watch out!
+        this.sprite.x -= delta * (scrollSpeed);
     }
 }
 
