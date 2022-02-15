@@ -102,7 +102,7 @@ export class GameApp {
 
             // Update the display
             if (!GameApp.Play && GameApp.Score != 0 ) {
-                GameApp.ScoreBoard.text = "Game Over!"
+                GameApp.ScoreBoard.text = "Final Score: " + GameApp.Score.toFixed(0) + "\t Game Over!"
                 GameApp.Stage.addChild(GameApp.popUp);
                 GameApp.Stage.addChild(GameApp.randomFact);
                 GameApp.Stage.addChild(GameApp.replayMessage);
