@@ -1,6 +1,6 @@
 # Astro Trash!
 
-Hackbeanpot 2022  
+Hackbeanpot Hackathon 2022  
 Feb 11, 2022 - Feb 13, 2022
 
 ## Team members:
