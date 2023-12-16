@@ -12,7 +12,8 @@ Feb 11, 2022 - Feb 13, 2022
 A web browser game that informs players about the dangers of space junk.
 
 ## Deployment
-https://astro-trash.netlify.app/
+https://astro-trash.netlify.app/  
+https://youtu.be/HCCEJAzKIyM  
 
 ## Premise
 Space junk is close to hitting the International Space Station. You, the astronaut, have to hover over to the space ship that came to transport you to a nearby space station. Be careful of the space debris flying towards you as you float over to the space ship!
