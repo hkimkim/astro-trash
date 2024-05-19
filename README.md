@@ -31,8 +31,6 @@ Space junk is close to hitting the International Space Station. You, the astrona
 ```
 
 ## About Space Trash
-<img src="https://www.nasa.gov/sites/default/files/4-8-nrc-evaluates-nasas-orbital-debris-programs.jpg" width="300" height="300">
-
 The Earth has too much space debris floating around its orbit. There are approximatly 6,542 satellites that are currently orbiting the Earth, but half of them are doing nothing. To make things worse, when they collide, they get broken down into smaller pieces, creating more junk that clutter the earth's orbit. Space Junk is becoming the microplastics of space.
 
 The **dangers of space debris** is that it may collide with a functioning satellite or even the International Space Station and create unwanted damage.
